@@ -165,6 +165,12 @@ const menu = ref(-100)
         color: #fff
         font-family: sans-serif
 
+footer
+  .container
+    display: grid
+    grid-template-rows: 1fr auto
+    height: 20vh  
+
 .footer-wrapper
   display: flex
   align-items: center
