@@ -172,7 +172,10 @@ footer
     @media screen and (max-width: 8129px)
      height: 20vh
     @media screen and (max-width: 1600px)
-      height: 100%   
+      height: 30vh
+    @media screen and (max-width: 1300px)
+      height: 100%  
+         
 
 .footer-wrapper
   display: flex
