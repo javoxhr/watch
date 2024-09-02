@@ -169,7 +169,10 @@ footer
   .container
     display: grid
     grid-template-rows: 1fr auto
-    height: 20vh  
+    @media screen and (max-width: 8129px)
+     height: 20vh
+    @media screen and (max-width: 1300px)
+      height: 100%   
 
 .footer-wrapper
   display: flex
