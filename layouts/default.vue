@@ -171,7 +171,7 @@ footer
     grid-template-rows: 1fr auto
     @media screen and (max-width: 8129px)
      height: 20vh
-    @media screen and (max-width: 1300px)
+    @media screen and (max-width: 1600px)
       height: 100%   
 
 .footer-wrapper
