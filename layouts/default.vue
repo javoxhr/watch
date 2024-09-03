@@ -148,6 +148,7 @@ const menu = ref(-100)
 .menu-open
   width: 300px
   position: fixed
+  z-index: 10
   right: 0
   height: 100%
   background: #272727
