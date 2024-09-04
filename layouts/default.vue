@@ -38,7 +38,7 @@ const menu = ref(-100)
       <div class="container">
         <div class="header-wrapper">
           <div class="site-logo">
-            <NuxtLink>
+            <NuxtLink to="/">
               <img src="~/assets/images/svg/logo.svg" alt="" />
             </NuxtLink>
           </div>

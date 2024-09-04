@@ -1,4 +1,36 @@
 <script setup>
+onMounted(() => {
+  const image = document.querySelectorAll("#imageplus");
+  const imageMin = document.querySelectorAll("#imageminus");
+  const opnBox = document.querySelectorAll(".opn-box");
+
+  image.forEach((el, ip) => {
+    el.addEventListener("click", () => {
+      el.style.display = "none";
+      opnBox.forEach((bx, bi) => {
+        if (ip === bi) {
+          bx.style.display = 'block';
+        }
+      });
+      imageMin.forEach((m, im) => {
+        if (ip === im) {
+          m.style.display = "block";
+        }
+        m.addEventListener('click', () => {
+          if (ip === im) {
+            el.style.display = 'block';
+            m.style.display = 'none';
+          }
+          opnBox.forEach((bx, bi) => {
+            if (ip === bi) {
+              bx.style.display = 'none';
+            }
+          });
+        }, { once: true });
+      });
+    });
+  });
+});
 </script>
 
 <template>
@@ -306,48 +338,117 @@
             <div class="first-inf">
               <div class="first-inf__header">
                 <h3>Soatlarni qanday buyurtma qilsam bo ‘ladi?</h3>
-                <img src="~/assets/images/png/minus.png" alt="">
+                <img
+                  id="imageplus"
+                  src="~/assets/images/png/pluse.png"
+                  alt=""
+                />
+                <img
+                  id="imageminus"
+                  src="~/assets/images/png/minus.png"
+                  alt=""
+                />
               </div>
               <ul>
-                <li>1. Oʻzingizga yoqqan soatni tanlab,  shaxsiy maʼlumotlaringizni kiriting. Tez orada siz bilan bogʼlanamiz.</li>
-                <li>2. Soatlarni saytdagi telefon raqamimizga aloqaga chiqib, buyurtma berishingiz mumkin.</li>
+                <li>
+                  1. Oʻzingizga yoqqan soatni tanlab, shaxsiy maʼlumotlaringizni
+                  kiriting. Tez orada siz bilan bogʼlanamiz.
+                </li>
+                <li>
+                  2. Soatlarni saytdagi telefon raqamimizga aloqaga chiqib,
+                  buyurtma berishingiz mumkin.
+                </li>
               </ul>
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Soat sotib olsam dostavkaga ham alohida to‘lov qilamanmi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
             </div>
-            
+
+            <div class="opn-box">
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+            </div>
+
             <div class="nxt-item">
               <h3>Buyurtmam necha kunda keladi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
 
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Buyurtmam vaqtida kelmasa nima bo‘ladi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Agar buyurtmam yoqmasa qaytarib bersam bo‘ladimi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Dizaynga qildirish pullimi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Qanday bonuslar mavjud?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
 
             <div class="nxt-item">
               <h3>Bo‘lib to‘lashga ham soat sotib olsam bo‘ladimi?</h3>
-              <img src="~/assets/images/png/pluse.png">
+              <img id="imageplus" src="~/assets/images/png/pluse.png" />
+              <img id="imageminus" src="~/assets/images/png/minus.png" alt="" />
+            </div>
+
+            <div class="opn-box">
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              </p>
             </div>
           </div>
         </div>
@@ -378,7 +479,7 @@
             </div>
           </div>
           <div class="form-box__wrapper-right">
-            <img src="~/assets/images/png/map.png">
+            <iframe class="maps-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24316.778372714223!2d71.79141119999998!3d40.3734528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb834e3d0e41df%3A0xde0b15447812c74f!2s%22Festival%22%20ko&#39;ngilochar%20markazi!5e0!3m2!1sru!2s!4v1725452082830!5m2!1sru!2s" width="600" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -808,4 +909,10 @@
             position: absolute
             left: 550px
             top: 30px
+
+.maps-google
+  border-radius: 20px 
+  @media screen and (max-width: 750px)
+    width: 100% !important
+    height: 320px          
 </style>

@@ -1,18 +1,19 @@
 <script setup>
-
 </script>
 
 <template>
-    <div>
-        <div class="image-wrap">
-            <img src="~/assets/images/png/product-img.png" alt="">
-        </div>
-        <h2 class="product-title">EUTOUR E030</h2>
-        <div class="product-price-wrap">
-            <span>600 uzs</span>
-            <span>150 uzs / oyiga</span>
-        </div>
-    </div>
+  <div>
+    <NuxtLink to="/detail">
+      <div class="image-wrap">
+        <img src="~/assets/images/png/product-img.png" alt="" />
+      </div>
+      <h2 class="product-title">EUTOUR E030</h2>
+      <div class="product-price-wrap">
+        <span>600 uzs</span>
+        <span>150 uzs / oyiga</span>
+      </div>
+    </NuxtLink>
+  </div>
 </template>
 
 <style lang="sass" scoped>
@@ -28,7 +29,7 @@
     color: #fff
     font-weight: 500
     font-size: 24px
-    padding: 20px 0 
+    padding: 20px 0
     @media screen and (max-width: 750px)
         padding: 10px 0
         font-size: 18px
@@ -47,5 +48,5 @@
             padding: 8px
             background: #292929
             color: #fff
-            border-radius: 6px           
+            border-radius: 6px
 </style>
