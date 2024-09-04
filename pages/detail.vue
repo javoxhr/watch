@@ -49,9 +49,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div :class="{'hidden-cart': cartShow}">
     <div class="overlay" v-if="cartShow"></div>
-    <div class="cart" v-if="cartShow">
+    <div class="cart" v-if="cartShow" :class="'hidden-card'">
             <div class="container">
                 <div class="cart-wrapper">
                       <button class="modal-close" @click="cartShow = false">
@@ -360,7 +360,7 @@ onMounted(() => {
             </div>
           </div>
           <div class="form-box__wrapper-right">
-            <iframe class="maps-google sub-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24316.778372714223!2d71.79141119999998!3d40.3734528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb834e3d0e41df%3A0xde0b15447812c74f!2s%22Festival%22%20ko&#39;ngilochar%20markazi!5e0!3m2!1sru!2s!4v1725452082830!5m2!1sru!2s" width="600" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="sub-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24316.778372714223!2d71.79141119999998!3d40.3734528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb834e3d0e41df%3A0xde0b15447812c74f!2s%22Festival%22%20ko&#39;ngilochar%20markazi!5e0!3m2!1sru!2s!4v1725452082830!5m2!1sru!2s" width="600" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -369,8 +369,6 @@ onMounted(() => {
 </template>
 
 <style lang="sass">
-.maps-google
-  border-radius: 20px
 .images-media
   margin-top: -20px !important
   padding-bottom: 20px
